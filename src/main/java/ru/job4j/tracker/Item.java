@@ -23,12 +23,6 @@ public class Item implements Comparable<Item> {
 
     @Override
     public int compareTo(Item o) {
-        if (this.id > o.getId()) {
-            return 1;
-        } else if (this.id < o.getId()) {
-            return -1;
-        } else {
-            return 0;
-        }
+      return Integer.compare(this.id, o.getId());
     }
 }

@@ -34,18 +34,7 @@ public class Tracker {
     }
 
     public List<Item> sortDescId() {
-        Collections.sort(items, new Comparator<Item>() {
-            @Override
-            public int compare(Item o1, Item o2) {
-                if (o1.getId() > o2.getId()) {
-                    return -1;
-                } else if (o1.getId() < o2.getId()) {
-                    return 1;
-                } else {
-                    return 0;
-                }
-            }
-        });
+        Collections.sort(items, new SortByIdDesc());
         return items;
     }
 }
